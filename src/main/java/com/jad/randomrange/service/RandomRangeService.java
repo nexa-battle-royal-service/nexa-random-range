@@ -10,7 +10,7 @@ public class RandomRangeService {
 
     public int getRandomInRange(int min, int max) {
         if (min >= max) {
-            throw new IllegalArgumentException("Min must be less than Max");
+            return -1;
         }
         return RandomRangeService.RANDOM.nextInt((max - min) + 1) + min;
     }
